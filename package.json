@@ -1,7 +1,7 @@
 {
   "name": "geforcenow-proxy-replit",
-  "version": "1.0.0",
-  "description": "A Node.js Express-based proxy server for GeForce NOW, easily deployable on Replit or Render",
+  "version": "2.0.0",
+  "description": "A Node.js Express-based proxy server for GeForce NOW with HTTP rewriting, WebSocket/WebRTC relay, and session management",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -12,7 +12,9 @@
     "geforce-now",
     "express",
     "replit",
-    "render"
+    "render",
+    "http-rewriter",
+    "websocket-relay"
   ],
   "author": "Your Name",
   "license": "MIT",
@@ -20,6 +22,11 @@
     "express": "^4.18.2",
     "axios": "^1.6.0",
     "cors": "^2.8.5",
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "cheerio": "^1.0.0-rc.12",
+    "express-session": "^1.17.3",
+    "cookie-parser": "^1.4.6",
+    "ws": "^8.14.0",
+    "http-proxy": "^1.18.1"
   }
 }
