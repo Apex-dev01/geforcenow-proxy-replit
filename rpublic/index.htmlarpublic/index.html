@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeForce NOW Proxy - Loader</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="loader-panel">
+            <div class="header">
+                <h1>🎮 GeForce NOW Proxy</h1>
+                <p class="subtitle">Cloud Gaming Proxy Loader</p>
+            </div>
+
+            <div class="form-section">
+                <div class="form-group">
+                    <label for="urlInput">Enter GeForce NOW URL:</label>
+                    <input 
+                        type="url" 
+                        id="urlInput" 
+                        placeholder="https://play.geforcenow.com"
+                        class="url-input"
+                    >
+                    <small class="help-text">Enter the full URL of the GeForce NOW service or application</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="modeSelect">Select Loading Mode:</label>
+                    <select id="modeSelect" class="mode-select">
+                        <option value="iframe">Iframe (Isolated)</option>
+                        <option value="window">New Window</option>
+                        <option value="tab">New Tab</option>
+                    </select>
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="enableServiceWorker" checked>
+                    <label for="enableServiceWorker">Enable Service Worker (Offline Support)</label>
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="enableCache" checked>
+                    <label for="enableCache">Enable Caching</label>
+                </div>
+
+                <button id="loadBtn" class="load-button" onclick="loadGeForceNow()">Load GeForce NOW</button>
+            </div>
+
+            <div class="info-section">
+                <div class="info-item">
+                    <span class="info-icon">ℹ️</span>
+                    <span>Proxy server will handle all requests</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">🔒</span>
+                    <span>Session cookies are managed securely</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">⚡</span>
+                    <span>WebSocket and WebRTC connections supported</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="iframeContainer" class="iframe-container hidden">
+            <div class="iframe-header">
+                <button class="close-btn" onclick="closeIframe()">✕ Close</button>
+                <span id="statusText" class="status-text">Loading...</span>
+            </div>
+            <iframe 
+                id="geforcenowIframe" 
+                class="geforcenow-iframe"
+                sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-pointer-lock"
+            ></iframe>
+        </div>
+    </div>
+
+    <script src="/loader.js"></script>
+</body>
+</html>
