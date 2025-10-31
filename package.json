@@ -1,0 +1,25 @@
+{
+  "name": "geforcenow-proxy-replit",
+  "version": "1.0.0",
+  "description": "A Node.js Express-based proxy server for GeForce NOW, easily deployable on Replit or Render",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "keywords": [
+    "proxy",
+    "geforce-now",
+    "express",
+    "replit",
+    "render"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1"
+  }
+}
